@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>students</title>
+</head>
+<body>
+<table border="5px">
+    {% for i in ob %}
+        <tr>
+        <td> {{i.name}}</td>
+        <td> {{i.username}}</td>
+        <td>{{i.password}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.mark}}</td>
+                        <td><a href="{%  url 'app1:delete' i.id %}"> Delete</a> </td>
+                        <td><a href="{%  url 'app1:update' i.id %}">Update</a> </td>
+        </tr>
+{% endfor %}
+
+</table>
+</body>
+</html>

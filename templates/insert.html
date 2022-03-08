@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>students</title>
+</head>
+<body>
+<h1>REGISTER FORM</h1>
+<form action="{% url 'app1:register' %}"  method="post">
+    {% csrf_token %}
+    <h2>application form</h2>
+    <label for="name">name</label>
+    <input type="text" name="name">
+    <br>
+    <label for="username">username</label>
+    <input type="text" name="username">
+    <br>
+    <label for="password">password</label>
+    <input type="text" name="password">
+    <br>
+    <label for="dob">dob</label>
+    <input type="date" name="dob">
+    <br>
+    <label for="mark">mark</label>
+    <input type="text" name="mark">
+    <br>
+    <input type="submit" value="save">
+
+</form>
+
+</body>
+</html>
